@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="general_task_type_edit" model="ir.ui.view">
+        <field name="name">project.task.type.form.general.extend</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="is_lock_for_user_drag"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="general_task_type_tree" model="ir.ui.view">
+        <field name="name">project.task.type.tree.general.extend</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="is_lock_for_user_drag"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
